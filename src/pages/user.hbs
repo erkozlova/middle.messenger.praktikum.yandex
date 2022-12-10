@@ -1,44 +1,47 @@
-{{!< main}}
+---
+prev_href: ./chats.hbs
+name: Иван
+data:
+- text: Почта
+  value: iuser@gmai.com
+- text: Логин
+  value: iuser
+- text: Имя
+  value: Иван
+- text: Фамилия
+  value: Иванов
+- text: Телефон
+  value: +7(900) 900 90 90
 
+edit_data: 
+- text: Изменить данные
+  href: ./user_edit.hbs
+- text: Изменить пароль
+  href: ./password_edit.hbs
+exit_text: Выйти
+exit_href: ./login.hbs
+---
+
+{{!< main}}
 <div class="w-full flex">
-    <div class="w-20 bg-gray-50 h-screen flex justify-center items-center border-r-2 border-gray-100">
-        <button class="bg-blue-600 text-yellow-50 w-10 h-10 rounded-full p-2 hover:bg-blue-500"><-</button>
-    </div>
+    {{> "prev_page_button/prev_page_button"}}
     <div class="flex w-full flex-col items-center">
         <div class="w-36 h-36 bg-slate-200 rounded-full mt-16 hover:cursor-pointer hover:bg-slate-300">
         </div>
-        <h1 class="mt-5">Иван</h1>
+        <h1 class="mt-5">{{name}}</h1>
         <div class="mt-16 w-1/2">
-            <div class="flex justify-between border-b border-slate-200 py-2.5">
-                <p>Почта</p>
-                <p>iuser@gmai.com</p>
-            </div>
-            <div class="flex justify-between border-b border-slate-200 py-2.5">
-                <p>Логин</p>
-                <p>iuser</p>
-            </div>
-            <div class="flex justify-between border-b border-slate-200 py-2.5">
-                <p>Имя</p>
-                <p>Иван</p>
-            </div>
-            <div class="flex justify-between border-b border-slate-200 py-2.5">
-                <p>Фамилия</p>
-                <p>Баклажанов</p>
-            </div>
-            <div class="flex justify-between border-b border-slate-200 py-2.5">
-                <p>Телефон</p>
-                <p>+7(900) 900 90 90</p>
-            </div>
+            {{#each data}}
+                {{> "user_data_item/user_data_item"}}
+            {{/each}}
         </div>
         <div class="w-1/2 mt-36">
-            <div class="flex justify-between border-b border-slate-200 text-blue-600 py-2.5 hover:cursor-pointer hover:text-blue-500">
-                <p>Изменить данные</p>
-            </div>
-            <div class="flex justify-between border-b border-slate-200  text-blue-600 py-2.5 hover:cursor-pointer  hover:text-blue-500">
-                <p>Изменить пароль</p>
-            </div>
+            {{#each edit_data}}
+                <div class="flex justify-between border-b border-slate-200 text-blue-600 py-2.5 hover:cursor-pointer hover:text-blue-500">
+                    <a href={{href}}>{{text}}</a>
+                </div>
+            {{/each}}
             <div class="py-2.5 text-red-500 hover:cursor-pointer  hover:text-red-400">
-                <p>Выйти</p>
+                <a href={{exit_href}}>{{exit_text}}</a>
             </div>
         </div>
     </div>

@@ -1,0 +1,19 @@
+.user_page {
+    @apply w-full flex;
+}
+
+.user_container {
+    @apply flex w-full flex-col items-center;
+}
+
+.user_avatar {
+    @apply w-36 h-36 bg-slate-200 rounded-full mt-16;
+}
+
+.user_inputs-container {
+    @apply mt-16 w-1/2;
+}
+
+.user_buttons-container {
+    @apply mt-20;
+}

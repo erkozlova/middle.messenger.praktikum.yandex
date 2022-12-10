@@ -2,17 +2,19 @@
 
 <div class="w-full flex">
     <div class="w-1/3 bg-slate-50 h-screen">
-        <div class="user_link"></div>
+        <div class="user_link"><a href="./user.hbs">User ></a></div>
         <div class="search"></div>
         <div class="chats_list"></div>
     </div>
     <div class="w-2/3 h-screen flex flex-col justify-end">
-        <div class="hidden">Выберите чат чтобы отправить сообщение</div>
+        <div class="hidden">
+            <p>Выберите чат чтобы отправить сообщение</p>
+        </div>
         <div class="user_hrader"></div>
         <div class="messages_story"></div>
         <div class="flex mb-3 w-full justify-around">
             <input class="w-11/12 rounded-2xl bg-slate-200 p-2" placeholder="Сообщение">
-            <button class="bg-blue-600 text-yellow-50 w-10 h-10 rounded-full p-2 hover:bg-blue-500">-></button>
+            <button class="flex justify-center items-center bg-blue-600 text-yellow-50 w-10 h-10 rounded-full p-2 hover:bg-blue-500"><img class="w-4 h-4" src="../assets/arrow-right.svg"></button>
         </div>
     </div>
 </div>
