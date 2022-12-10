@@ -34,9 +34,13 @@ buttons:
         <div class="user_avatar">
         </div>
         <div class="user_inputs-container">
+          <ul>
             {{#each inputs}}
+              <li>
                 {{> "user_input/user_input"}}
+              </li>
             {{/each}}
+          </ul>
         </div>
         {{#each buttons}}
             <div class="user_buttons-container">
