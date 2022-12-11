@@ -1,8 +1,9 @@
 ---
-code: 404
-description: Не туда попали
+reaction: Упс!
+description: Мы не смогли найти эту страницу
+src: ../assets/404.png
 ---
 
 {{!< main}}
 
-{{> "error/error" code=code description=description}}
+{{> "error/error" reaction=reaction description=description src=src}}

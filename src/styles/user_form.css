@@ -7,7 +7,7 @@
 }
 
 .user_avatar {
-    @apply w-36 h-36 bg-slate-200 rounded-full mt-16;
+    @apply w-36 h-36 bg-stone-200 rounded-full mt-16;
 }
 
 .user_inputs-container {
