@@ -1,0 +1,52 @@
+---
+prev_href: ./chats.hbs
+name: Иван
+data:
+- text: Почта
+  value: iuser@gmai.com
+- text: Логин
+  value: iuser
+- text: Имя
+  value: Иван
+- text: Фамилия
+  value: Иванов
+- text: Телефон
+  value: +7(900) 900 90 90
+
+edit_data: 
+- text: Изменить данные
+  href: ./user_edit.hbs
+- text: Изменить пароль
+  href: ./password_edit.hbs
+exit_text: Выйти
+exit_href: ./login.hbs
+---
+
+{{!< main}}
+<div class="w-full flex">
+    {{> "prev_page_button/prev_page_button"}}
+    <div class="flex w-full flex-col items-center">
+        <div class="w-36 h-36 bg-stone-200 rounded-full mt-16 hover:cursor-pointer hover:bg-stone-300">
+        </div>
+        <h1 class="mt-5">{{name}}</h1>
+        <div class="mt-16 w-1/2">
+            {{#each data}}
+                {{> "user_data_item/user_data_item"}}
+            {{/each}}
+        </div>
+        <div class="w-1/2 mt-36">
+        <ul>
+          {{#each edit_data}}
+            <li>
+              <div class="flex justify-between border-b border-stone-200 text-amber-700 py-2.5 hover:cursor-pointer hover:text-amber-600">
+                      <a href={{href}}>{{text}}</a>
+                  </div>
+            </li>
+          {{/each}}
+        </ul>
+            <div class="py-2.5 text-red-500 hover:cursor-pointer  hover:text-red-400">
+                <a href={{exit_href}}>{{exit_text}}</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.auth_container {
+    @apply w-1/3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-amber-700 rounded-xl flex flex-col min-h-1/2;
+}
+
+.auth_title-container {
+    @apply mt-14 mx-auto;
+}
+
+.auth_title {
+    @apply font-medium text-2xl;
+}
+
+.auth_inputs-container {
+    @apply mt-10 w-10/12 mx-auto mb-auto;
+}
+
+.auth_buttons-container {
+    @apply mb-8 mt-12;
+}

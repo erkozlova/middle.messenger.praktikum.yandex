@@ -1,0 +1,51 @@
+---
+prev_href: ./user.hbs
+inputs: 
+- text: Почта
+  name: email
+  type: text
+
+- text: Логин
+  name: login
+  type: text
+
+- text: Имя
+  name: first_name
+  type: text
+
+- text: Фамилия
+  name: second_name
+  type: text
+
+- text: Телефон
+  name: phone
+  type: text
+buttons:
+- text: Сохранить
+  variant: bg-amber-700 text-stone-50 hover:bg-amber-600 hover:text-stone-100
+  href: ./user.hbs
+---
+
+{{!< main}}
+
+<div class="user_page">
+    {{> "prev_page_button/prev_page_button"}}
+    <div class="user_container">
+        <div class="user_avatar">
+        </div>
+        <div class="user_inputs-container">
+          <ul>
+            {{#each inputs}}
+              <li>
+                {{> "user_input/user_input"}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        {{#each buttons}}
+            <div class="user_buttons-container">
+                {{> "button/button"}}
+            </div>
+        {{/each}}
+    </div>
+</div>
